@@ -30,6 +30,13 @@
         // join strings together to form a sentence
         .join('')
 
+        p.textContent = transcript;
+        // if you have finished a sentence, then start a new sentence
+        if(e.results[0].isFinal) {
+            p = document.createElement('p');
+            words.appendChild(p);
+        }
+
       console.log(transcript);
   });
 
